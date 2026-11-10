@@ -1,0 +1,123 @@
+/* ====================================================================
+   GLOBAL STYLES & RESET
+   ==================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+    padding: 0;
+}
+
+/* ====================================================================
+   HEADER & NAVIGATION MANAGEMENT
+   ==================================================================== */
+header {
+    background-color: #1a1a1a;
+    padding: 35px 20px;
+    text-align: center;
+    border-bottom: 2px solid #d4af37; /* Luxury Gold Core Accent */
+}
+
+header h1 {
+    color: #ffffff;
+    font-size: 2.4rem;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+nav {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 25px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.25s ease-in-out;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+/* ====================================================================
+   MAIN STRUCTURAL LAYOUT
+   ==================================================================== */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ====================================================================
+   REUSABLE UI COMPONENTS & INTERACTION BUTTONS
+   ==================================================================== */
+.btn {
+    display: inline-block;
+    background-color: #d4af37;
+    color: #121212;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    border: 2px solid #d4af37;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: #d4af37;
+}
+
+/* ====================================================================
+   FOOTER & COMPLIANCE STYLING
+   ==================================================================== */
+footer {
+    text-align: center;
+    padding: 25px 20px;
+    background-color: #0f0f0f;
+    color: #666666;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    border-top: 1px solid #222222;
+}
+
+/* ====================================================================
+   RESPONSIVE DESIGN (MOBILE ADAPTATION)
+   ==================================================================== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    
+    .about-box {
+        padding: 25px;
+    }
+}
