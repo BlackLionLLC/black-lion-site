@@ -3,119 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Specialty Lots (85+) | Black Lion Industries LLC</title>
-    <meta name="description" content="Explore traceable micro-lots and specialty grade agricultural offerings with sensory scores of 85+ from premium East African origins.">
+    <title>85+ Specialty Micro-Lots & Premium Traceability | Black Lion Industries LLC</title>
+    <meta name="description" content="Source exceptional, limited-run agricultural micro-lots verified at an 85 to 88+ specialty cupping score. Discover unique flavor profiles and complete origin traceability.">
+    <meta name="keywords" content="85+ Specialty Micro-Lots, Sensory Cupping Scores, Origin Traceability, Single-Origin Sourcing, Limited-Run Agriculture, Premium Artisanal Lots">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Specific layout styles for the 85+ Specialty Lots catalog */
-        .catalog-intro {
+        /* Specialized layouts for the newly structured 85+ enterprise profile page */
+        .page-hero {
+            padding: 60px 20px;
             text-align: center;
-            margin-bottom: 45px;
+            background: linear-gradient(135deg, #161616 0%, #1c1c1c 100%);
+            border-bottom: 1px solid #2a2a2a;
+            margin-bottom: 40px;
         }
-        .catalog-intro h2 {
-            font-size: 2.2rem;
+        .page-hero h2 {
+            font-size: 2.4rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        .page-hero .sub-tag {
+            font-size: 1.2rem;
             color: #d4af37;
-            margin-bottom: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
             letter-spacing: 1px;
+            margin-bottom: 20px;
         }
-        .catalog-intro p {
-            font-size: 1.1rem;
+        .page-hero p {
+            font-size: 1.15rem;
             color: #b3b3b3;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 30px auto;
+            line-height: 1.6;
         }
-        .lot-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-            gap: 30px;
-            margin-top: 20px;
-            margin-bottom: 60px;
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
         }
-        .lot-card {
+        .section-wrap {
             background: #1c1c1c;
             border: 1px solid #2a2a2a;
-            border-radius: 6px;
-            padding: 30px;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: border-color 0.3s ease;
-        }
-        .lot-card:hover {
-            border-color: #d4af37;
-        }
-        .lot-badge {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: #d4af37;
-            color: #121212;
-            font-weight: 700;
-            padding: 4px 10px;
+            padding: 40px;
             border-radius: 4px;
-            font-size: 0.8rem;
+            margin-bottom: 40px;
+        }
+        .section-title {
+            color: #d4af37;
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-wrap p {
+            color: #cdcdcd;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .bullet-list {
+            margin: 20px 0;
+            padding-left: 0;
+        }
+        .bullet-list li {
+            list-style: none;
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 15px;
+            color: #cdcdcd;
+            font-size: 1.05rem;
+        }
+        .bullet-list li::before {
+            content: "■";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #d4af37;
+            font-size: 0.9rem;
+        }
+        .bullet-list strong {
+            color: #ffffff;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .advantage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+        .advantage-card {
+            background: #141414;
+            border: 1px solid #2a2a2a;
+            padding: 25px;
+            border-radius: 4px;
+        }
+        .advantage-card h4 {
+            color: #d4af37;
+            font-size: 1.15rem;
+            margin-top: 0;
+            margin-bottom: 10px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-        .lot-card h3 {
-            color: #ffffff;
-            font-size: 1.4rem;
-            margin-bottom: 6px;
-            margin-top: 5px;
-            padding-right: 75px;
-        }
-        .origin-tag {
-            color: #d4af37;
-            font-size: 0.85rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-        }
-        .lot-desc {
-            color: #cdcdcd;
-            font-size: 0.98rem;
-            margin-bottom: 15px;
-        }
-        .lot-specs {
-            margin: 15px 0 25px 0;
-            font-size: 0.92rem;
+        .advantage-card p {
+            font-size: 0.95rem;
             color: #b3b3b3;
-            border-top: 1px solid #2a2a2a;
-            padding-top: 15px;
+            margin-bottom: 0;
+            line-height: 1.5;
         }
-        .lot-specs li {
-            list-style: none;
-            margin-bottom: 8px;
+        .terms-box {
+            background: #141414;
+            border-left: 4px solid #d4af37;
+            padding: 25px;
+            margin-top: 20px;
         }
-        .lot-specs strong {
+        .terms-box ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+        .terms-box li {
+            color: #cdcdcd;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        .terms-box li:last-child {
+            margin-bottom: 0;
+        }
+        .secondary-btn {
+            display: inline-block;
+            background-color: transparent;
             color: #ffffff;
-        }
-        .lot-btn {
-            display: block;
-            text-align: center;
-            background-color: #d4af37;
-            color: #121212;
-            padding: 12px 20px;
+            padding: 14px 30px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             border-radius: 4px;
-            border: 2px solid #d4af37;
-            transition: all 0.25s ease;
+            border: 2px solid #333333;
+            transition: all 0.3s ease;
         }
-        .lot-btn:hover {
-            background-color: transparent;
-            color: #d4af37;
+        .secondary-btn:hover {
+            border-color: #ffffff;
         }
     </style>
 </head>
 <body>
 
-    <!-- Top Brand Banner (Matches Homepage) -->
+    <!-- Top Brand Banner -->
     <header style="border-bottom: none; padding-bottom: 20px;">
         <img src="websiteheader.webp" alt="Black Lion Industries LLC" style="max-width: 100%; height: auto; margin-bottom: 10px;">
         <p style="color: #b3b3b3; font-style: italic; margin: 5px 0 0 0; font-size: 0.95rem;">
@@ -126,7 +166,7 @@
         </p>
     </header>
 
-    <!-- Sticky Action Bar (Matches Homepage) -->
+    <!-- Sticky Action Bar -->
     <div class="sticky-bar">
         <button class="hamburger-btn" onclick="document.getElementById('navDrawer').classList.toggle('open')">
             &#9776; <span style="font-size: 0.95rem;">Menu</span>
@@ -143,73 +183,58 @@
         <a href="contact.html">Inquire</a>
     </nav>
 
+    <!-- PAGE HERO HEADER -->
+    <section class="page-hero">
+        <h2>Black Lion Industries</h2>
+        <div class="sub-tag">Peak-Fresh 85+ Specialty Green Coffee</div>
+        <p>
+            We don't buy from corporate commodity brokers, and we don't sell aged warehouse inventory. Based directly in Addis Ababa, Black Lion bridges the gap between East Africa’s finest micro-lots and the world’s most discerning roasters. Every lot we offer is hand-selected, moisture-protected, and flown fresh to order.
+        </p>
+        <div class="hero-actions">
+            <a href="https://wa.me?text=Hello%20Black%20Lion%20Industries%2C%20I%20want%20to%20shop%20your%20current%20micro-lots." target="_blank" class="btn">Shop Current Micro-Lots</a>
+            <a href="https://wa.me?text=Hello%20Black%20Lion%20Industries%2C%20I%20would%20like%20to%20request%20a%20green%20coffee%20sample%20for%20cupping." target="_blank" class="secondary-btn">Request a Sample</a>
+        </div>
+    </section>
+
     <main>
-        <section class="catalog-intro">
-            <h2>Specialty Lots (85+ Cup Score)</h2>
+        
+        <!-- SECTION 2: ABOUT OUR SOURCING -->
+        <section class="section-wrap">
+            <h3 class="section-title">🌾 Empowering the Hands That Harvest</h3>
             <p>
-                Our specialty division secures traceable micro-lots and high-scoring allocations directly from premier highland estates across Ethiopia. Each lot undergoes strict physical grading and sensory cupping verification prior to export.
+                In Ethiopia, women are the backbone of the coffee harvest. They meticulously hand-sort the cherries, manage the washing stations, and drive the quality of the final cup. Yet, they are traditionally underrepresented in leadership and export ownership.
+            </p>
+            <p style="font-weight: bold; color: #d4af37; margin-bottom: 10px;">
+                Black Lion intentionally partners with and sources directly from:
+            </p>
+            <ul class="bullet-list">
+                <li>
+                    <strong>Women Estate Owners & Smallholders</strong>
+                    Ensuring premium direct-trade prices go straight into the hands of the female farmers who earn them.
+                </li>
+                <li>
+                    <strong>Women Q-Graders & Cuppers</strong>
+                    Utilizing certified female coffee scientists in Addis Ababa to strictly evaluate, score, and verify every single lot we acquire.
+                </li>
+            </ul>
+            <p style="margin-bottom: 0; font-style: italic; color: #ffffff; text-align: center; border-top: 1px solid #2a2a2a; padding-top: 20px;">
+                When you buy a Black Lion sack, you are investing in a transparent, equitable supply chain.
             </p>
         </section>
 
-        <section class="lot-grid">
-            
-            <!-- LOT 1 -->
-            <div class="lot-card">
-                <div>
-                    <span class="lot-badge">Grade 1</span>
-                    <h3>Yirgacheffe Washed Micro-Lot</h3>
-                    <p class="origin-tag">Origin: Ethiopia (Gedeo Zone)</p>
-                    <p class="lot-desc">An expressive, clean washed lot displaying delicate jasmine florals, bright bergamot acidity, and sweet white peach notes.</p>
-                    <ul class="lot-specs">
-                        <li><strong>Sensory Score:</strong> 87.5 / 100</li>
-                        <li><strong>Altitude:</strong> 1,950 – 2,200 MASL</li>
-                        <li><strong>Process:</strong> Fully Washed & Raised-Bed Dried</li>
-                        <li><strong>Packaging:</strong> 60kg GrainPro Jute Bags</li>
-                    </ul>
+        <!-- SECTION 3: THE BLACK LION ADVANTAGE -->
+        <section class="section-wrap">
+            <h3 class="section-title">The Black Lion Advantage</h3>
+            <div class="advantage-grid">
+                
+                <div class="advantage-card">
+                    <h4>📍 Based in Addis Ababa</h4>
+                    <p>We are physically on the ground in Ethiopia. We live where the coffee grows, allowing us to build deep personal relationships with washing stations in Yirgacheffe, Guji, Sidama, and beyond.</p>
                 </div>
-                <a href="https://wa.me?text=Hello%20Black%20Lion%20Industries%2C%20I%20would%20like%20a%20quote%20and%20sample%20info%20for%20the%20Yirgacheffe%20Washed%20Micro-Lot%20(85%2B)." target="_blank" class="lot-btn">Request Lot Allocation</a>
-            </div>
 
-            <!-- LOT 2 -->
-            <div class="lot-card">
-                <div>
-                    <span class="lot-badge">Grade 1</span>
-                    <h3>Sidamo Sun-Dried Natural</h3>
-                    <p class="origin-tag">Origin: Ethiopia (Sidama Region)</p>
-                    <p class="lot-desc">A rich, full-bodied natural selection bursting with ripe blueberry, dark cocoa richness, and a syrupy, lingering finish.</p>
-                    <ul class="lot-specs">
-                        <li><strong>Sensory Score:</strong> 86.5 / 100</li>
-                        <li><strong>Altitude:</strong> 1,850 – 2,150 MASL</li>
-                        <li><strong>Process:</strong> Natural / Sun-Dried</li>
-                        <li><strong>Packaging:</strong> 60kg GrainPro Jute Bags</li>
-                    </ul>
+                <div class="advantage-card">
+                    <h4>📈 Our Sourcing Profiles</h4>
+                    <p>We specialize in securing exceptional, limited-run micro-lots that cup at an 85 to 88+ specialty score. These selections deliver intense fruit notes, brilliant clarities, and wildly unique flavor profiles for roasters looking to stand out. While our passion lies in these rare micro-lots, we build agile supply chains. Whether you need to source a specific profile for premium cold brew extractions or require full container-load logistics, we have the network and expertise to secure the exact lot your business demands.</p>
                 </div>
-                <a href="https://wa.me?text=Hello%20Black%20Lion%20Industries%2C%20I%20would%20like%20a%20quote%20and%20sample%20info%20for%20the%20Sidamo%20Sun-Dried%20Natural%20(85%2B)." target="_blank" class="lot-btn">Request Lot Allocation</a>
-            </div>
 
-            <!-- LOT 3 -->
-            <div class="lot-card">
-                <div>
-                    <span class="lot-badge">Grade 1</span>
-                    <h3>Guji Highland Reserve</h3>
-                    <p class="origin-tag">Origin: Ethiopia (Guji Zone)</p>
-                    <p class="lot-desc">A complex, high-elevation lot offering vibrant stone fruit layers, hibiscus aromatics, and balanced honey sweetness.</p>
-                    <ul class="lot-specs">
-                        <li><strong>Sensory Score:</strong> 88.0 / 100</li>
-                        <li><strong>Altitude:</strong> 2,000 – 2,300 MASL</li>
-                        <li><strong>Process:</strong> Washed & Natural Lots Available</li>
-                        <li><strong>Packaging:</strong> 60kg GrainPro Jute Bags</li>
-                    </ul>
-                </div>
-                <a href="https://wa.me?text=Hello%20Black%20Lion%20Industries%2C%20I%20would%20like%20a%20quote%20and%20sample%20info%20for%20the%20Guji%20Highland%20Reserve%20(85%2B)." target="_blank" class="lot-btn">Request Lot Allocation</a>
-            </div>
-
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Black Lion Industries LLC. All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
+                <div class="advantage-card">
