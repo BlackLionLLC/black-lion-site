@@ -100,30 +100,34 @@
 </head>
 <body>
 
-    <header>
+       <!-- Top Brand Banner (Scrolls naturally) -->
+    <header style="border-bottom: none; padding-bottom: 20px;">
         <img src="websiteheader.webp" alt="Black Lion Industries LLC" style="max-width: 100%; height: auto; margin-bottom: 10px;">
         <p style="color: #b3b3b3; font-style: italic; margin: 5px 0 0 0; font-size: 0.95rem;">
             Connecting Global Markets with Premium African Origins
         </p>
-        <p style="color: #d4af37; margin: 5px 0 15px 0; font-size: 0.85rem; letter-spacing: 1px; font-weight: bold;">
+        <p style="color: #d4af37; margin: 5px 0 0 0; font-size: 0.85rem; letter-spacing: 1px; font-weight: bold;">
             B2B Agricultural Sourcing &bull; Bulk Import-Export Logistics &bull; Origin Supply Chain Management
         </p>
-        <nav>
-
-        <p style="color: #b3b3b3; font-style: italic; margin: 5px 0 0 0; font-size: 0.95rem;">
-            Connecting Global Markets with Premium African Origins
-        </p>
-        <p style="color: #d4af37; margin: 5px 0 15px 0; font-size: 0.85rem; letter-spacing: 1px; font-weight: bold;">
-            B2B Agricultural Sourcing &bull; Bulk Import-Export Logistics &bull; Origin Supply Chain Management
-        </p>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="specialty-lots.html">Specialty Lots (85+)</a>
-            <a href="commercial-lots.html">Commercial & High-Volume Lots</a>
-            <a href="logistics.html">Integrated Logistical Solutions</a>
-            <a href="contact.html">Inquire</a>
-        </nav>
     </header>
+
+    <!-- Sticky Action Bar (Locks to top of screen on scroll) -->
+    <div class="sticky-bar">
+        <button class="hamburger-btn" onclick="document.getElementById('navDrawer').classList.toggle('open')">
+            &#9776; <span style="font-size: 0.95rem;">Menu</span>
+        </button>
+        <a href="https://wa.me" target="_blank" class="contact-link">Contact Us</a>
+    </div>
+
+    <!-- Expandable Navigation Drawer -->
+    <nav id="navDrawer" class="menu-drawer">
+        <a href="index.html">Home</a>
+        <a href="specialty-lots.html">Specialty Lots (85+)</a>
+        <a href="commercial-lots.html">Commercial & High-Volume Lots</a>
+        <a href="logistics.html">Integrated Logistical Solutions</a>
+        <a href="contact.html">Inquire</a>
+    </nav>
+
 
     <!-- SECTION 1: HERO TEXT -->
     <section class="hero">
