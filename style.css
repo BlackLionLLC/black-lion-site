@@ -121,3 +121,87 @@ footer {
         padding: 25px;
     }
 }
+/* ====================================================================
+   STICKY NAVIGATION BAR & HAMBURGER DRAWER
+   ==================================================================== */
+.sticky-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #141414;
+    border-bottom: 2px solid #d4af37;
+    padding: 12px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hamburger-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+
+.hamburger-btn:hover {
+    color: #d4af37;
+}
+
+.contact-link {
+    background-color: #d4af37;
+    color: #121212;
+    padding: 8px 18px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.2s;
+}
+
+.contact-link:hover {
+    background-color: #ffffff;
+}
+
+/* Slide-down menu drawer */
+.menu-drawer {
+    display: none;
+    background-color: #1c1c1c;
+    border-bottom: 1px solid #333;
+    padding: 20px 25px;
+    flex-direction: column;
+    gap: 15px;
+    position: sticky;
+    top: 56px; /* Locks directly under the sticky bar */
+    z-index: 999;
+}
+
+.menu-drawer.open {
+    display: flex;
+}
+
+.menu-drawer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 5px 0;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.menu-drawer a:hover {
+    color: #d4af37;
+}
+
