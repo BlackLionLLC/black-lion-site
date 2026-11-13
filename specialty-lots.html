@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specialty Lots (85+) | Black Lion Industries LLC</title>
+    <meta name="description" content="Explore traceable micro-lots and specialty grade agricultural offerings with sensory scores of 85+ from premium East African origins.">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific layout styles for the 85+ Specialty Lots catalog */
+        .catalog-intro {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+        .catalog-intro h2 {
+            font-size: 2.2rem;
+            color: #d4af37;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+        .catalog-intro p {
+            font-size: 1.1rem;
+            color: #b3b3b3;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .lot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+            margin-bottom: 60px;
+        }
+        .lot-card {
+            background: #1c1c1c;
+            border: 1px solid #2a2a2a;
+            border-radius: 6px;
+            padding: 30px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: border-color 0.3s ease;
+        }
+        .lot-card:hover {
+            border-color: #d4af37;
+        }
+        .lot-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #d4af37;
+            color: #121212;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .lot-card h3 {
+            color: #ffffff;
+            font-size: 1.4rem;
+            margin-bottom: 6px;
+            margin-top: 5px;
+            padding-right: 75px;
+        }
+        .origin-tag {
+            color: #d4af37;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        .lot-desc {
+            color: #cdcdcd;
+            font-size: 0.98rem;
+            margin-bottom: 15px;
+        }
+        .lot-specs {
+            margin: 15px 0 25px 0;
+            font-size: 0.92rem;
+            color: #b3b3b3;
+            border-top: 1px solid #2a2a2a;
+            padding-top: 15px;
+        }
+        .lot-specs li {
+            list-style: none;
+            margin-bottom: 8px;
+        }
+        .lot-specs strong {
+            color: #ffffff;
+        }
+        .lot-btn {
+            display: block;
+            text-align: center;
+            background-color: #d4af37;
+            color: #121212;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            border: 2px solid #d4af37;
+            transition: all 0.25s ease;
+        }
+        .lot-btn:hover {
+            background-color: transparent;
+            color: #d4af37;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Brand Banner (Matches Homepage) -->
+    <header style="border-bottom: none; padding-bottom: 20px;">
+        <img src="websiteheader.webp" alt="Black Lion Industries LLC" style="max-width: 100%; height: auto; margin-bottom: 10px;">
+        <p style="color: #b3b3b3; font-style: italic; margin: 5px 0 0 0; font-size: 0.95rem;">
+            Connecting Global Markets with Premium African Origins
+        </p>
+        <p style="color: #d4af37; margin: 5px 0 0 0; font-size: 0.85rem; letter-spacing: 1px; font-weight: bold;">
+            B2B Agricultural Sourcing &bull; Bulk Import-Export Logistics &bull; Origin Supply Chain Management
+        </p>
+    </header>
+
+    <!-- Sticky Action Bar (Matches Homepage) -->
+    <div class="sticky-bar">
+        <button class="hamburger-btn" onclick="document.getElementById('navDrawer').classList.toggle('open')">
+            &#9776; <span style="font-size: 0.95rem;">Menu</span>
+        </button>
+        <a href="https://wa.me" target="_blank" class="contact-link">Contact Us</a>
+    </div>
+
+    <!-- Expandable Navigation Drawer -->
+    <nav id="navDrawer" class="menu-drawer">
+        <a href="index.html">Home</a>
+        <a href="specialty-lots.html">Specialty Lots (85+)</a>
+        <a href="commercial-lots.html">Commercial & High-Volume Lots</a>
+        <a href="logistics.html">Integrated Logistical Solutions</a>
+        <a href="contact.html">Inquire</a>
+    </nav>
+
+    <main>
+        <section class="catalog-intro">
+            <h2>Specialty Lots (85+ Cup Score)</h2>
+            <p>
+                Our specialty division secures traceable micro-lots and high-scoring allocations directly from premier highland estates across Ethiopia. Each lot undergoes strict physical grading and sensory cupping verification prior to export.
+            </p>
+        </section>
+
+        <section class="lot-grid">
+            
+            <!-- LOT 1 -->
+            <div class="lot-card">
+                <div>
+                    <span class="lot-badge">Grade 1</span>
+                    <h3>Yirgacheffe Washed Micro-Lot</h3>
+                    <p class="origin-tag">Origin: Ethiopia (Gedeo Zone)</p>
+                    <p class="lot-desc">An expressive, clean washed lot displaying delicate jasmine florals, bright bergamot acidity, and sweet white peach notes.</p>
+                    <ul class="lot-specs">
+                        <li><strong>Sensory Score:</strong> 87.5 / 100</li>
+                        <li><strong>Altitude:</strong> 1,950 – 2,200 MASL</li>
+                        <li><strong>Process:</strong> Fully Washed & Raised-Bed Dried</li>
+                        <li><strong>Packaging:</strong> 60kg GrainPro Jute Bags</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me?text=Hello%20Black%20Lion%20Industries%2C%20I%20would%20like%20a%20quote%20and%20sample%20info%20for%20the%20Yirgacheffe%20Washed%20Micro-Lot%20(85%2B)." target="_blank" class="lot-btn">Request Lot Allocation</a>
+            </div>
+
+            <!-- LOT 2 -->
+            <div class="lot-card">
+                <div>
+                    <span class="lot-badge">Grade 1</span>
+                    <h3>Sidamo Sun-Dried Natural</h3>
+                    <p class="origin-tag">Origin: Ethiopia (Sidama Region)</p>
+                    <p class="lot-desc">A rich, full-bodied natural selection bursting with ripe blueberry, dark cocoa richness, and a syrupy, lingering finish.</p>
+                    <ul class="lot-specs">
+                        <li><strong>Sensory Score:</strong> 86.5 / 100</li>
+                        <li><strong>Altitude:</strong> 1,850 – 2,150 MASL</li>
+                        <li><strong>Process:</strong> Natural / Sun-Dried</li>
+                        <li><strong>Packaging:</strong> 60kg GrainPro Jute Bags</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me?text=Hello%20Black%20Lion%20Industries%2C%20I%20would%20like%20a%20quote%20and%20sample%20info%20for%20the%20Sidamo%20Sun-Dried%20Natural%20(85%2B)." target="_blank" class="lot-btn">Request Lot Allocation</a>
+            </div>
+
+            <!-- LOT 3 -->
+            <div class="lot-card">
+                <div>
+                    <span class="lot-badge">Grade 1</span>
+                    <h3>Guji Highland Reserve</h3>
+                    <p class="origin-tag">Origin: Ethiopia (Guji Zone)</p>
+                    <p class="lot-desc">A complex, high-elevation lot offering vibrant stone fruit layers, hibiscus aromatics, and balanced honey sweetness.</p>
+                    <ul class="lot-specs">
+                        <li><strong>Sensory Score:</strong> 88.0 / 100</li>
+                        <li><strong>Altitude:</strong> 2,000 – 2,300 MASL</li>
+                        <li><strong>Process:</strong> Washed & Natural Lots Available</li>
+                        <li><strong>Packaging:</strong> 60kg GrainPro Jute Bags</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me?text=Hello%20Black%20Lion%20Industries%2C%20I%20would%20like%20a%20quote%20and%20sample%20info%20for%20the%20Guji%20Highland%20Reserve%20(85%2B)." target="_blank" class="lot-btn">Request Lot Allocation</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Black Lion Industries LLC. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
