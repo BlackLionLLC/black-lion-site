@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experimental Processing & Rare Varietals | Black Lion Industries LLC</title>
+    <meta name="description" content="Explore next-generation fermentation profiles, specialized anaerobic micro-lots, and rare multi-generational Gesha lineages verified at 88+ specialty cupping levels.">
+    <meta name="keywords" content="Anaerobic Fermentation, Carbonic Maceration, Gesha Village Specialty, Experimental Micro-Lots, High-Score Green Coffee">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Shared variables and custom architecture for the experimental allocation series */
+        body {
+            background-color: #121212;
+            color: #cdcdcd;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            padding-bottom: 20px;
+            border-bottom: 1px solid #2a2a2a;
+            margin-bottom: 30px;
+        }
+        .catalog-banner {
+            padding: 50px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #1a150c 0%, #141414 100%);
+            border: 1px solid #332712;
+            border-radius: 4px;
+            margin-bottom: 40px;
+        }
+        .catalog-banner h2 {
+            font-size: 2.2rem;
+            color: #ffffff;
+            margin-top: 0;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        .catalog-banner p {
+            font-size: 1.1rem;
+            color: #b3b3b3;
+            max-width: 750px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        /* Interactive Filter Navigation UI Element */
+        .catalog-nav-filters {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 35px;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            background: #1c1c1c;
+            border: 1px solid #333333;
+            color: #cdcdcd;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.2s ease;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            border-color: #d4af37;
+            color: #ffffff;
+            background: #242424;
+        }
+
+        /* Highly Scannable Dynamic Catalog Grid Structuring */
+        .lot-grid-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        .premium-lot-card {
+            background: #1c1c1c;
+            border: 1px solid #2a2a2a;
+            border-radius: 6px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .premium-lot-card:hover {
+            transform: translateY(-4px);
+            border-color: #d4af37;
+        }
+        .badge-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .score-badge {
+            background: #2a220d;
+            border: 1px solid #d4af37;
+            color: #d4af37;
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+        .process-badge {
+            background: #222222;
+            color: #a6a6a6;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            border: 1px solid #333333;
+        }
+        .premium-lot-card h3 {
+            color: #ffffff;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+        .region-label {
+            color: #d4af37;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .flavor-profile-text {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #b3b3b3;
+            margin-bottom: 20px;
+        }
+        .spec-list-group {
+            margin: 0 0 25px 0;
+            padding: 0;
+            border-top: 1px solid #2a2a2a;
+            padding-top: 15px;
+        }
+        .spec-list-group li {
+            list-style: none;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .spec-list-group li span {
+            color: #888888;
+        }
+        .spec-list-group li strong {
+            color: #ffffff;
+        }
+        .action-button-allocation {
+            display: block;
+            text-align: center;
+            background: transparent;
+            color: #ffffff;
+            border: 1px solid #444444;
+            padding: 12px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.2s ease;
+        }
+        .action-button-allocation:hover {
+            background: #ffffff;
+            color: #121212;
+            border-color: #ffffff;
+        }
+        
+        /* Information highlight container wrapper */
+        .info-disclosure-panel {
+            background: #141414;
+            border: 1px solid #2a2a2a;
+            border-left: 4px solid #d4af37;
+            padding: 30px;
+            border-radius: 4px;
+            margin-bottom: 40px;
+        }
+        .info-disclosure-panel h4 {
+            color: #ffffff;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.15rem;
+        }
+        .info-disclosure-panel p {
+            margin: 0;
+            line-height: 1.6;
+            font-size: 1rem;
+            color: #cdcdcd;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Brand Banner Elements -->
+    <header style="border-bottom: none; padding-bottom: 20px;">
+        <img src="websiteheader.webp" alt="Black Lion Industries LLC" style="max-width: 100%; height: auto; margin-bottom: 10px;">
+        <p style="color: #b3b3b3; font-style: italic; margin: 5px 0 0 0; font-size: 0.95rem;">
+            Connecting Global Markets with Premium African Origins
+        </p>
+        <p style="color: #d4af37; margin: 5px 0 0 0; font-size: 0.85rem; letter-spacing: 1px; font-weight: bold;">
+            B2B Agricultural Sourcing &bull; Bulk Import-Export Logistics &bull; Origin Supply Chain Management
+        </p>
+    </header>
+
+    <!-- Main Module Header Panel -->
+    <section class="catalog-banner">
+        <h2>Experimental Processing & Rare Varietals</h2>
+        <p>
+            Pushing the boundaries of traditional flavor profiles. This specialized enterprise layer targets high-complexity micro-lots created using advanced anaerobic environments, temperature-controlled processing structures, and rare single-estate genetic mutations.
+        </p>
+    </section>
+
+    <!-- Sub-Catalog Functional Filter Buttons -->
+    <div class="catalog-nav-filters">
+        <button class="filter-btn active">All Experimental Lots</button>
+        <button class="filter-btn">Anaerobic Series</button>
+        <button class="filter-btn">Maceration Selections</button>
+        <button class="filter-btn">Gesha Selections</button>
+    </div>
+
+    <main>
+        <!-- THREE NEW EXPERIMENTAL MICRO-LOT ENTRIES -->
+        <section class="lot-grid-wrapper">
+
+            <!-- Alternate Lot 1 -->
+            <div class="premium-lot-card">
+                <div>
+                    <div class="badge-row">
+                        <span class="score-badge">89.0 Cup Score</span>
+                        <span class="process-badge">120hr Anaerobic Natural</span>
+                    </div>
+                    <h3>Sidama Bensa Fermentation Reserve</h3>
+                    <p class="region-label">Origin: Sidama Region (Bensa)</p>
+                    <p class="flavor-profile-text">An ultra-complex profile with distinct red wine notes, stewed raspberry brightness, intense dark cherry sweetness, and a heavy velvety body.</p>
+                    
+                    <ul class="spec-list-group">
+                        <li><span>Altitude:</span> <strong>2,100 – 2,350 MASL</strong></li>
+                        <li><span>Varietal:</span> <strong>74112 & 74110 Selection</strong></li>
+                        <li><span>Fermentation:</span> <strong>Oxygen-Free Stainless Steel Tanks</strong></li>
+                        <li><span>Export Packing:</span> <strong>30kg Vacuum Sealed Boxes</strong></li>
+                    </ul>
+                </div>
+                <a href="https://wa.me." target="_blank" class="action-button-allocation">Request Allocation Details</a>
+            </div>
+
+            <!-- Alternate Lot 2 -->
+            <div class="premium-lot-card">
+                <div>
+                    <div class="badge-row">
+                        <span class="score-badge">88.5 Cup Score</span>
+                        <span class="process-badge">Carbonic Maceration</span>
+                    </div>
+                    <h3>Guji Hambela Advanced Maceration</h3>
+                    <p class="region-label">Origin: Guji Zone (Hambela)</p>
